@@ -21,7 +21,7 @@ def tweet_create(request):
             tweet.user = request.user
             tweet.save()
             return redirect('tweet_list')
-        
+        # aadded
         pass 
     else:
         form = TweetForm()

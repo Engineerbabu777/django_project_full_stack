@@ -1,1 +1,18 @@
-Helo From Index
+{% extends 'layout.html' %}
+
+{% block title %}
+Chai aur tweet 2.0
+{% endblock title %}
+
+
+{% block content %}
+
+<h1 class="text-center text-white mt-4">Chai aur tweet</h1>
+
+<p>Chai aur tweet is a simple Django application.</p>
+
+<p>It's a place to post your chai aur tweet.</p>
+
+{% comment %} <p>Feel free to <a href="{% url 'tweet:tweet_new' %}">add</a> a new tweet.</p> {% endcomment %}
+
+{% endblock content %}

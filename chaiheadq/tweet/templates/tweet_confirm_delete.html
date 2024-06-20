@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Chai aur tweet 2.0
+{% endblock title %}
+
+
+{% block content %}
+
+<h1 class="text-center text-white mt-4">Are you sure?</h1>
+
+<p>Chai aur tweet is a simple Django application.</p>
+
+<p>It's a place to post your chai aur tweet.</p>
+
+<form method="post" action="{% url 'tweet_delete' tweet.id %}">
+    {% csrf_token %}
+    <p>Are you sure you want to delete this tweet?</p>
+    <button type="submit" class="btn btn-danger">Yes, delete it!</button>
+</form>
+
+</form>
+
+{% comment %} <p>Feel free to <a href="{% url 'tweet:tweet_new' %}">add</a> a new tweet.</p> {% endcomment %}
+
+{% endblock content %}
